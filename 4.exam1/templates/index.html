@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FlaskTest</title>
+</head>
+<body>
+<h2>HUYDV-LABPYTHON</h2>
+<h4>API Netbox</h4>
+
+
+{% block body %}
+<p>Thực hiện tiến trình:</p>
+{% endblock %}
+
+<a href="{{ url_for('getvm') }}">List all VM</a>
+<a href="{{ url_for('createvm') }}">Tạo VM</a>
+</body>
+</html>

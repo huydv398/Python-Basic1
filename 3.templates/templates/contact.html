@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block body %}
+{% if person == "admin" %}
+
+
+<p> Hiển thị thông tin về ADMIN </p>
+
+
+{% elif person == "maintainer" %}
+
+	
+<p> Trang thông tin dành cho người bảo trì</p>
+
+
+{% elif person == "member" %}
+
+	
+<p> Kính chào khách hàng của chúng tôi. Hy vọng bạn hài lòng với dịch vụ của chúng tôi</p>
+
+
+{% else %}
+
+	
+<p> Hello, {{ person }}. Hãy tham gia dịch vụ của chúng tôi</p>
+
+
+{% endif %}
+{% endblock %}

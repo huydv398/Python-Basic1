@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<p> Delete VMs</p>
+
+
+<form method="DELETE" action="{{ url_for('delvm') }}"> 
+    <p> Delete VMs:</p>
+    <button type="submit">Delete</button> 
+</form> 
+{% endblock %}

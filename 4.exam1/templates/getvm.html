@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<p> All VM netbox</p>
+<table cellpadding="0" cellspacing="0" width="80%" style="border: 1px;" rules="none">
+    <tbody>
+        <tr>
+            <th style="width: 196px;">Tên VM</th>
+            <th style="width: 196px;">ID VM</th>
+            <th style="width: 196px;">Description</th>
+            <th style="width: 196px;">Action</th>
+        </tr>
+        {% for id in results %}
+        <tr>
+            <th style="width: 196px;">{{id['name']}}</th>
+            <th style="width: 196px;">{{id['id']}}</th>
+            <th style="width: 196px;">{{id['description']}}</th>
+            <th style="width: 196px;"><a href="/del/{{id['id']}} ">Xóa VM</a></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

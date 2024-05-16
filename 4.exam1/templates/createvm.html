@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<p> Create VMs</p>
+
+
+<form method="POST" action="{{ url_for('createvm') }}"> 
+    Name: <input name=name type=text></input><br> 
+    <label for="-names">Cluster:</label>
+    
+        <select name="cluster">
+            {% for cl in results_cluster %}
+            <option value={{cl['id']}}>{{cl['display']}} </option>
+            {% endfor %}
+        </select><br>
+    
+    Description: <input name=description type=text></input><br> 
+    <label for="-names">Status</label>
+        <select name="Status">
+            <option value="active">Active</option>
+            <option value="offline">Offline</option>
+        </select>
+    <button type="submit">Create</button> 
+</form> 
+{% endblock %}
